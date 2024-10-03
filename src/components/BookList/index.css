@@ -23,3 +23,16 @@
     font-weight:500;
     margin-right: 5px;
 }
+.delete-button{
+    color:#e81031;
+    border:none;
+    width:100px;
+    border-radius:7px;
+    padding:8px;
+    margin-top: 10px;
+    cursor:pointer;
+}
+.delete-button:hover{
+    background-color: #e81031;
+    color:#fff;
+}

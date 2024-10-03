@@ -3,17 +3,19 @@ import { MdLibraryAdd } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
 import { useParams } from 'react-router-dom'
 import Header from '../Header'
-import Context from '../../context/Context'
+import Context from '../../context/Context.js'
 import './index.css'
 
 const BookDetails = ()=>{
     const {id} = useParams()
-    const {bookData,libraryData,setLibraryData} = useContext(Context)
+    const {bookData} = useContext(Context)
     const displayBook = bookData[id-1]
 
     const onLibrary = ()=>{
-        const newLibrary = displayBook
-        setLibraryData(...libraryData,newLibrary)
+        let libraryData = JSON.parse(localStorage.getItem("libraryData"))||[]
+        let newLibraryData = displayBook
+        libraryData.push(newLibraryData)
+        localStorage.setItem("libraryData",JSON.stringify(libraryData))
     }
 
     return(
@@ -21,15 +23,15 @@ const BookDetails = ()=>{
             <Header/>
             <div className='book-details'>
             <div className='book-mini-row'>
-            <h1>{displayBook.title}</h1>
+            <h1 className='book-head2'>{displayBook.title}</h1>
             <button type="button" className="book-button" onClick={onLibrary}>
             <MdLibraryAdd size={22}/>
             Add to Library
             </button>
             </div>
-            <p>Ratings: <FaStar color="#eded11"/>{displayBook.rating}</p>
-            <p>Publication Year: {displayBook.publication_year}</p>
-            <p>Description: {displayBook.description}</p>
+            <p><span style={{fontWeight:"bold"}}>Ratings: </span><FaStar color="#eded11"/>{displayBook.rating}</p>
+            <p><span style={{fontWeight:"bold"}}>Publication Year: </span>{displayBook.publication_year}</p>
+            <p style={{textAlign:"center"}}><span style={{fontWeight:"bold"}}>Description :</span>{displayBook.description}</p>
             </div>
         </>
     )

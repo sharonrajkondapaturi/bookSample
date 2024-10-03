@@ -1,0 +1,9 @@
+.book-unlist{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.collection{
+    text-align:center;
+    font-weight:500;
+}

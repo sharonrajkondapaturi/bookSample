@@ -5,6 +5,10 @@
     align-items: center;
     min-height: 100vh;
 }
+.book-head2{
+    font-weight:500;
+    font-size:24px;
+}
 .book-button{
     border: none;
     height:32px;
@@ -21,4 +25,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+@media screen and (max-width:767px) {
+
 }

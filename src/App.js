@@ -2,6 +2,7 @@ import {useState} from 'react'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Home from './components/Home'
 import BookDetails from './components/BookDetails'
+import Library from './components/Library'
 import Context from './context/Context.js'
 import './App.css';
 
@@ -56,13 +57,13 @@ const bookDetails = {
 
 const App = () => {
   const [bookData,setBookDetails] = useState(bookDetails.books)
-  const [libraryData,setLibraryData] = useState([])
   return(
-    <Context.Provider value={{bookData,setBookDetails,libraryData,setLibraryData}}>
+    <Context.Provider value={{bookData,setBookDetails}}>
       <BrowserRouter>
       <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/bookDetails/:id" element={<BookDetails/>}/>
+      <Route path="/myLibrary" element={<Library/>}/>
       </Routes>
     </BrowserRouter>
     </Context.Provider>

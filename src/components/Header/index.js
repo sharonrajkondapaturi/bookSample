@@ -12,7 +12,7 @@ return(
     <header className='nav-back'>
         <nav>
             <a className="nav-ele" href="/">Home</a>
-            <a className="nav-ele" href="/myLibrary"onClick={onLib}>My Library</a>
+            <a className="nav-ele" onClick={onLib}>My Library</a>
         </nav>
     </header>
     </>

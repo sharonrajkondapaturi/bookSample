@@ -1,0 +1,17 @@
+.book-display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.book-input{
+    margin:15px;
+    width:400px;
+    padding:8px;
+    border-radius:10px;
+    border-width: 1px;
+}
+.book-unlist{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

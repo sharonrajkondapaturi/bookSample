@@ -1,0 +1,22 @@
+.nav-back{
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-inline:20px;
+}
+
+.nav-ele{
+    color:#fff;
+    font-weight:bold;
+    padding:10px;
+    text-decoration: none;
+    transition:1s;
+    margin-right:7px;
+    border-radius:12px;
+}
+.nav-ele:hover{
+    background-color: #e6c08e;
+}

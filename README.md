@@ -2,6 +2,14 @@
 
 Book Project
 
+the project is created using react js
+
+### project link
+https://booksample.netlify.app/ 
+
+### github project 
+https://github.com/sharonrajkondapaturi/bookSample
+
 ### components used (functional compoenents)
 
 1.BookDetails
@@ -25,6 +33,8 @@ Book Project
 
 1.react-icons
 2.react-router-dom
+
+### media queries has been used
 
 ### Home
 

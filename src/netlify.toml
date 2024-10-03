@@ -2,3 +2,13 @@
 from = "/*"
 to = "/index.html"
 status = 200
+
+[context.production]
+  publish = "dist/my-project"
+  command = "ng build --prod"
+  environment = { NOT_PRIVATE_STUFFS = "totally not top secret", NODE_VERSION = "14.15.3", API_KEY = "abc1234teeheehee" }
+
+[context.staging] # “staging” is a branch name
+  command = "echo 'staging'"
+  base = "staging"
+  environment = { SOME_KEY = "t0te5Important5tuff" }

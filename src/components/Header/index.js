@@ -4,6 +4,10 @@ import './index.css'
 //This component is used as a Header to redirect to respective pages
 const Header = ()=>{
     const navigate = useNavigate()
+
+    const onHome = ()=>{
+        navigate("/")
+    }
     const onLib = ()=>{
         navigate('/myLibrary')
     }
@@ -11,8 +15,8 @@ return(
     <>
     <header className='nav-back'>
         <nav>
-            <a className="nav-ele" href="/">Home</a>
-            <a className="nav-ele" onClick={onLib}>My Library</a>
+            <span className="nav-ele" onClick={onHome}>Home</span>
+            <span className="nav-ele" onClick={onLib}>My Library</span>
         </nav>
     </header>
     </>

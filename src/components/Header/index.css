@@ -16,6 +16,7 @@
     transition:1s;
     margin-right:7px;
     border-radius:12px;
+    cursor: pointer;
 }
 .nav-ele:hover{
     background-color: #e6c08e;

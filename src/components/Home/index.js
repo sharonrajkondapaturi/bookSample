@@ -4,6 +4,7 @@ import BookList from '../BookList'
 import Context from '../../context/Context.js'
 import './index.css'
 
+//BookDetails
 const bookDetails = {
     "books": [{
     "id": 1,
@@ -53,12 +54,18 @@ const bookDetails = {
     ]
     }
 
+//The component is a Home Page to display the list of books and to filter the books
 const Home = ()=>{
     const {bookData,setBookDetails} = useContext(Context)
     const [bookType, setBookType] = useState('')
+
+    //use to display the list of books
     const onBooks = ()=>(
         <ul className='book-unlist'>
-            {
+            {bookData.length === 0  ?(<div>
+            <img src="https://img.freepik.com/premium-vector/business-man-thinking-vector-art-illustration-business-man-thinking-flat-vector_554682-7505.jpg" alt="book" className='book-image'/>
+            <h1 className='book-error'>No Current Book List</h1>
+            </div>):
             bookData.map(eachBook=>
             <BookList key={eachBook.id} book={eachBook}/>
             )
@@ -66,6 +73,8 @@ const Home = ()=>{
         </ul>
     )
 
+
+    //use to filter the books
     const onBookDetails = (event)=>{
         setBookType(bookType)
         const filterBooks = bookDetails.books.filter(book => book.title.toLowerCase().includes(event.target.value.toLowerCase()))

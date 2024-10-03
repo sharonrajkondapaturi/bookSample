@@ -6,6 +6,7 @@ import Library from './components/Library'
 import Context from './context/Context.js'
 import './App.css';
 
+//details of the Books
 const bookDetails = {
   "books": [{
   "id": 1,
@@ -55,6 +56,7 @@ const bookDetails = {
   ]
   }
 
+//used to navigate to respective pages when the user triggers
 const App = () => {
   const [bookData,setBookDetails] = useState(bookDetails.books)
   return(

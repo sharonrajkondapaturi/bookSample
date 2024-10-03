@@ -9,6 +9,9 @@
     font-weight:500;
     font-size:24px;
 }
+p{
+    font-size: 18px;
+}
 .book-button{
     border: none;
     height:32px;
@@ -28,9 +31,33 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    margin-bottom:10px;
+}
+.book-list-image{
+    width:500px;
+    height:300px;
 }
 @media screen and (max-width:767px) {
     .book-head2{
         font-size:18px;
+    }
+    .book-list-image{
+        width:400px;
+        height:260px;
+    }
+    p{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:575px) {
+    .book-list-image{
+        width:300px;
+        height:200px;
+    }
+}
+@media screen and (max-width:375px) {
+    .book-list-image{
+        width:250px;
+        height:200px;
     }
 }

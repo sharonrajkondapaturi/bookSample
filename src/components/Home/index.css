@@ -13,7 +13,13 @@
 .book-unlist{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
+}
+.book-image{
+    width:200px;
+    height:200px;
+    align-content: center;
 }
 @media screen and (max-width:575px){
     .book-input{

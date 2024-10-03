@@ -1,5 +1,6 @@
 import './index.css'
 
+//This component is used as a Header to redirect to respective pages
 const Header = ()=>{
 return(
     <>

@@ -1,0 +1,24 @@
+.book-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.book-button{
+    border: none;
+    height:32px;
+    width:150px;
+    border-radius: 5px;
+    background-color:#5d50eb ;
+    color:#fff;
+    cursor: pointer;
+    text-align: center;
+    margin-left:10px;
+}
+.book-mini-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -8,7 +8,7 @@ const BookList = (props)=>{
     const navigate = useNavigate()
 
     const onBookDetails = ()=>{
-        navigate(`bookDetails/:${id}`)
+        navigate(`/bookDetails/${id}`)
     }
     return(
         <li className='book-list' onClick={onBookDetails}>

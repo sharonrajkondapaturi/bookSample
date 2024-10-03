@@ -1,6 +1,7 @@
-import {useState} from 'react'
+import {useState,useContext} from 'react'
 import Header from '../Header'
 import BookList from '../BookList'
+import Context from '../../context/Context.js'
 import './index.css'
 
 const bookDetails = {
@@ -53,13 +54,13 @@ const bookDetails = {
     }
 
 const Home = ()=>{
-    const [bookData, setBookDetails] = useState(bookDetails.books)
+    const {bookData,setBookDetails} = useContext(Context)
     const [bookType, setBookType] = useState('')
     const onBooks = ()=>(
         <ul className='book-unlist'>
             {
             bookData.map(eachBook=>
-                <BookList key={eachBook.id} book={eachBook}/>
+            <BookList key={eachBook.id} book={eachBook}/>
             )
             }
         </ul>
@@ -68,7 +69,6 @@ const Home = ()=>{
     const onBookDetails = (event)=>{
         setBookType(bookType)
         const filterBooks = bookDetails.books.filter(book => book.title.toLowerCase().includes(event.target.value.toLowerCase()))
-        console.log(filterBooks)
         setBookDetails(filterBooks)
     }
 

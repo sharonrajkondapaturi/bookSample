@@ -16,8 +16,10 @@
 .book-span{
     margin-bottom:5px;
 }
+
 .book-head{
     font-size:24px;
     text-align: center;
     font-weight:500;
+    margin-right: 5px;
 }

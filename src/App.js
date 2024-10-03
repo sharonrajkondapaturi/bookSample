@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Home from './components/Home'
 import BookDetails from './components/BookDetails'
@@ -54,10 +55,10 @@ const bookDetails = {
   }
 
 const App = () => {
-  const bookData = bookDetails.books
-  const libraryData = {}
+  const [bookData,setBookDetails] = useState(bookDetails.books)
+  const [libraryData,setLibraryData] = useState([])
   return(
-    <Context.Provider value={{bookData,libraryData}}>
+    <Context.Provider value={{bookData,setBookDetails,libraryData,setLibraryData}}>
       <BrowserRouter>
       <Routes>
       <Route path="/" element={<Home/>}/>

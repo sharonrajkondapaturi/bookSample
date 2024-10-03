@@ -36,3 +36,11 @@
     background-color: #e81031;
     color:#fff;
 }
+@media screen and (max-width:575px) {
+    .book-list{
+        width:260px;
+    }
+    .book-head{
+        font-size: 21px;
+    }
+}

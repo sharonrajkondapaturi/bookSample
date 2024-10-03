@@ -1,4 +1,3 @@
-import Context  from '../../context/Context.js'
 import Header from '../Header'
 import BookList from '../BookList/index.js'
 import './index.css'
@@ -19,7 +18,7 @@ const Library = ()=>{
 return(
     <>
     <Header/>
-    <h1 className='collection'>My Collections</h1>
+    <h1 className='collection'>My Library</h1>
     {onLibraryList()}
     </>
 )

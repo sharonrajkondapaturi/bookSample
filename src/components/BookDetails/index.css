@@ -12,7 +12,7 @@
 .book-button{
     border: none;
     height:32px;
-    width:150px;
+    width:90px;
     border-radius: 5px;
     background-color:#5d50eb ;
     color:#fff;
@@ -20,12 +20,17 @@
     text-align: center;
     margin-left:10px;
 }
+.book-button:hover{
+    background-color: #469c3d;
+}
 .book-mini-row{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 @media screen and (max-width:767px) {
-
+    .book-head2{
+        font-size:18px;
+    }
 }

@@ -1,4 +1,4 @@
-import {useState,useContext} from 'react'
+import {useContext} from 'react'
 import { MdLibraryAdd } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
 import { useParams } from 'react-router-dom'
@@ -25,8 +25,8 @@ const BookDetails = ()=>{
             <div className='book-mini-row'>
             <h1 className='book-head2'>{displayBook.title}</h1>
             <button type="button" className="book-button" onClick={onLibrary}>
-            <MdLibraryAdd size={22}/>
-            Add to Library
+            <MdLibraryAdd size={20}/>
+            Add
             </button>
             </div>
             <p><span style={{fontWeight:"bold"}}>Ratings: </span><FaStar color="#eded11"/>{displayBook.rating}</p>

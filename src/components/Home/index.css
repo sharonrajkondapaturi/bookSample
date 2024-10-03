@@ -15,3 +15,13 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+@media screen and (max-width:575px){
+    .book-input{
+        width:300px;
+    }
+}
+@media screen and (max-width:379px){
+    .book-input{
+        width:280px;
+    }
+}
